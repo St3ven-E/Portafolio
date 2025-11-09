@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compañeros - ¡Supérate!</title>
+  <link rel="stylesheet" href="primer.css" />
+  <style>
+    /* ===== ESTILOS EXCLUSIVOS DE ESTA PÁGINA ===== */
+
+    main {
+      padding: 40px 8%;
+      text-align: center;
+      background-color: #f4f8fb;
+    }
+
+    .titulo-seccion {
+      font-size: 2em;
+      color: #0a84ff;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== TARJETAS DE COMPAÑEROS ===== */
+    .contenedor-tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin-bottom: 60px;
+    }
+
+    .tarjeta {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 240px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .tarjeta.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-bottom: 4px solid #0a84ff;
+    }
+
+    .info-tarjeta {
+      padding: 15px;
+    }
+
+    .info-tarjeta h3 {
+      color: #0a84ff;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+
+    .info-tarjeta p {
+      font-size: 0.9em;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0a84ff;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .tarjeta {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Mis Compañeros</h1>
+    <p>Personas que compartieron conmigo momentos inolvidables durante nuestro paso por ¡Supérate!</p>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Primer.html">Primer Año</a></li>
+      <li><a href="segundo.html">Segundo Año</a></li>
+      <li><a href="Tercero.html">Tercer Año</a></li>
+      <li><a href="Alumnos.html" class="active">Anuario</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <h2 class="titulo-seccion">PROMO 2025</h2>
+
+    <div class="contenedor-tarjetas">
+      <div class="tarjeta">
+        <img src="img/Alicia Flores.jpg" alt="Alicia Flores">
+        <div class="info-tarjeta">
+          <h3>Alicia Flores</h3>
+          <p>Mi mejor amiga, mi gran apoyo en este viaje, gracias por todo tu apoyo</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="#no me mandó su foto" alt="Carlos Huezo">
+        <div class="info-tarjeta">
+          <h3>Carlos huezo</h3>
+          <p>Gracias por siempre sacar una sonrisa, eres un gran compañero siempre con ese entusiasmo contagiable</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Catherine Miranda.jpg" alt="Catherine Miranda">
+        <div class="info-tarjeta">
+          <h3>Catherine Miranda</h3>
+          <p>Siempre tímida pero gracias por ser tan amable con todos</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/David Deodanes.jpeg" alt="David Deodanes">
+        <div class="info-tarjeta">
+          <h3>David Deodanes</h3>
+          <p>Tus energias contagiables siempre te caracterizan, gracias por siempre ser un buen amigo y compañero</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Helen Batres.jpeg" alt="Helen Batres">
+        <div class="info-tarjeta">
+          <h3>Helen Batres</h3>
+          <p>Poco a poco te ganaste mi confianza y cariño, gracias por ser mi amiga</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Josue Ayala.jpeg" alt="Josue Ayala">
+        <div class="info-tarjeta">
+          <h3>Israel Ayala</h3>
+          <p>Tantas buenas cualidades pero tu siempre modesto, gracias por permitirme ser tu amigo</p>
+        </div>
+      </div> 
+
+      <div class="tarjeta">
+        <img src="img/Roberto Renderos.jpg" alt="Josue Renderos">
+        <div class="info-tarjeta">
+          <h3>Roberto Renderos</h3>
+          <p>Increible personalidad amable y cálida, siempre inspira confianza</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Julissa Arteaga.jpeg" alt="Julissa Rivera">
+        <div class="info-tarjeta">
+          <h3>Julissa Rivera</h3>
+          <p>Siempre positiva nunca te ví enojada, gracias por todo el cariño</p>
+        </div>
+      </div>
+
+      <div class="tarjeta" style="align-items: center;">
+        <img src="img/Katherine Martinez.jpeg" alt="Katherine Martinez">
+        <div class="info-tarjeta">
+          <h3>Katherine Martinez</h3>
+          <p>Una gran alumna, ejemplo de responsabilidad y detallista, gran compañera y sobre todo gran amiga</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Manuel Cerón.jpeg" alt="Manuel Cerón">
+        <div class="info-tarjeta">
+          <h3>Manuel Cerón</h3>
+          <p>Gracioso y simpático, me alegra poder tener buenos momentos con vos, gracias por ser un buen compañero</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Nayeli Flores.jpg" alt="Nayeli Flores">
+        <div class="info-tarjeta">
+          <h3>Nayeli Flores</h3>
+          <p>Como un regalo caído del cielo, gracias por ser mi amiga y compañera de travesuras </p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Rocio Castillo.jpeg" alt="Rocio Castillo">
+        <div class="info-tarjeta">
+          <h3>Rocio Castillo</h3>
+          <p>La risa más contagiosa y divertia, me encantó ser tu compañero, extrañaré molestarte</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Samuel López.jpeg" alt="Samuel López">
+        <div class="info-tarjeta">
+          <h3>Samuel López</h3>
+          <p>Un ejemplo de superación y afrontación de retos, gracias por ser mi amigo</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Gabriela Herrera.jpg" alt="Sthepanie Herrera">
+        <div class="info-tarjeta">
+          <h3>Sthephanie Herrera</h3>
+          <p>Siempre con dulzura y amabilidad para todos, siempre te tendré cariño</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Steven Escobar.jpg" alt="Steven Escobar">
+        <div class="info-tarjeta">
+          <h3>Steven Escobar</h3>
+          <p>Yo</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Tariana Hernández.jpeg" alt="Tatiana Hernández">
+        <div class="info-tarjeta">
+          <h3>Tatiana Hernández</h3>
+          <p>De las personas más amables de todo tercer año, admirable y noble</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Valeria Alvarado.jpg" alt="Valeria Álvarado">
+        <div class="info-tarjeta">
+          <h3>Valeria Álvarado</h3>
+          <p>Compañera de larga trayectoria, te vi crecer en michos aspectos, estoy orgulloso</p>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <img src="img/Xochilt Martinez.jpeg" alt="Xochilt Martinez">
+        <div class="info-tarjeta">
+          <h3>Xochilt Martinez</h3>
+          <p>Tenes una gran dedicación y responsabilidad con todo lo que haces, no cambies</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+ <main>
+  <h2 class="titulo-seccion">STAFF</h2>
+
+  <div class="contenedor-tarjetas">
+
+    <div class="tarjeta">
+      <img src="img/Marielos Bonilla.png" alt="Miss Marielos">
+      <div class="info-tarjeta">
+        <h3>Miss Marielos</h3>
+        <p>Su atención y apoyo fuerom clave para todo mi viaje gracias por todo y por su compromiso con los jóvenes</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Jocelyn López.png" alt="Jocelyn López">
+      <div class="info-tarjeta">
+        <h3>Miss Jocelyn</h3>
+        <p>Gracias por siempre recibirnos con una sonrisa y tratarno con cariño</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Cristopher Preza.png" alt="Cristopher Preza">
+      <div class="info-tarjeta">
+        <h3>Teacher Cristopher</h3>
+        <p>Un miembro muy importante en el staff su energia se contagia con solo una sonrisa, gracias por ser un gran amigo</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Vladimir Hernandez.png" alt="Vladimir Hernandez">
+      <div class="info-tarjeta">
+        <h3>Teacher Vladimir</h3>
+        <p>Su sonrisa, sus consejos, sus pláticas, todo lo llevo en mi corazón, gracias por todo</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Atlaí Martínez.png" alt="Atlaí Martínez">
+      <div class="info-tarjeta">
+        <h3>Teacher Atla</h3>
+        <p>Gracias por todos sus ánimos t por siempre contagiar de energia y cariño los incios de semana</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Jesús Cerén.png" alt="Jesús Cerén">
+      <div class="info-tarjeta">
+        <h3>Teacher Jesús</h3>
+        <p>Teacher Jesús, gracias por todo su apoyo y consjeos, agradezco poder gradueramen con usted</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Ana Alvarado.png" alt="Ana Alvarado">
+      <div class="info-tarjeta">
+        <h3>Miss Anita</h3>
+        <p>Gracias por ser un pilar en primer año, por siempre apoyar a sus alumnos</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Janeth Villalta.png" alt="Janeth Villalta">
+      <div class="info-tarjeta">
+        <h3>Janeth Villalta</h3>
+        <p>Gracias Miss por siempre estar al pendiente y a la disposición de ayudar a los jóvenes</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Dany Gomez.png" alt="Dany Gomez">
+      <div class="info-tarjeta">
+        <h3>Dany Gomez</h3>
+        <p>Gracias por ayudarme tanto y siempre etsar ayudando a que entendedamos de la forma más pasiente posible</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Bryan de Paz.png" alt="Bryan de Paz">
+      <div class="info-tarjeta">
+        <h3>Bryan de Paz</h3>
+        <p>Gracias por siempre confiar en nosotros y y hacer de ¡Supérate! un hogar</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Reynita.png" alt="Reynita">
+      <div class="info-tarjeta">
+        <h3>Niña Reynita</h3>
+        <p>Siempre ayudando a los alumnos y haciendo su trabajo de la mejor manera </p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="img/Omar.png" alt="Don Omar">
+      <div class="info-tarjeta">
+        <h3>Don Omar</h3>
+        <p>Gracias por siempre recibirnos con ese entuciasmo y por mantener el centro en buen estado</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p>&copy; 2025 - Steven Escobar</p>
+  </footer>
+
+  <!-- ANIMACIÓN -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tarjetas = document.querySelectorAll(".tarjeta");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.2 });
+      tarjetas.forEach(t => observer.observe(t));
+    });
+  </script>
+</body>
+</html>

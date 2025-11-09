@@ -1,0 +1,183 @@
+/* ======= ESTILOS GENERALES ======= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+/* ======= HEADER ======= */
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, #0a84ff, #59bfff);
+    color: white;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* ======= NAVBAR ======= */
+#navbar {
+    background-color: #0a84ff;
+    text-align: center;
+}
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#navbar li {
+    display: inline-block;
+}
+#navbar a {
+    display: block;
+    padding: 14px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+#navbar a:hover,
+#navbar a.active {
+    background-color: #0071e3;
+    border-radius: 4px;
+}
+
+/* ======= SECCIONES ======= */
+main {
+    padding: 40px 8%;
+}
+
+.seccion {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.seccion h2 {
+    font-size: 1.8em;
+    color: #0a84ff;
+    margin-bottom: 10px;
+}
+
+.seccion p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* ======= PROYECTOS ======= */
+.proyecto {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.proyecto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s ease;
+}
+
+.proyecto img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ======= GALERÍA ======= */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.galeria img {
+    width: 350px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.galeria img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ======= FOOTER ======= */
+#footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a84ff;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* ======= ANIMACIONES ======= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .galeria img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center; /* centra las tarjetas si no llenan la fila */
+}
+
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
